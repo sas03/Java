@@ -1,0 +1,58 @@
+/* package whatever; // don't place package name! */
+ 
+import java.util.*;
+ 
+class Ideone
+{
+	public static void main (String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		String eingabe = sc.next();
+		String eingabe1 = sc.next();
+		int a = Integer.parseInt(eingabe);
+		int b = Integer.parseInt(eingabe1);
+		System.out.print("Eingabe: "+a+" "+b+"\n");
+		System.out.print("a = "+a+" Binaer: "+Integer.toBinaryString(a)+"\n");
+		System.out.print("b = "+b+" Binaer: "+Integer.toBinaryString(b)+"\n");
+		while(true)
+		{
+			System.out.print(a+","+b+"\n");
+			if((a != 0) || (b != 0))
+			{
+				int n = 30;
+				int i = 0;
+				while(n>=0)
+				{
+					int x = i << n;
+					int aBit = a & x;
+					int bBit = b & x;
+					if(aBit == bBit)
+					{
+						n--;
+						if(n<0){
+							System.out.print("a = b \n");
+						}
+						continue;
+					}	
+					else
+					{
+						if(aBit != 0)
+						{
+							System.out.print("a > b");
+						}
+						else
+						{
+							System.out.print("b > a");
+						}
+						break;
+					}
+				}
+			}
+			else
+			{
+				break;
+			}
+		}
+		System.out.print("Programmende");
+	}
+}
