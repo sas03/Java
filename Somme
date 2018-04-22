@@ -1,0 +1,91 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+ 
+/* Name of the class has to be "Main" only if the class is public. */
+class Rechner
+{
+	public static Scanner sc = new Scanner(System.in);
+	//System.out.println("Gib was ein: ");
+	public static String eingabe = sc.next();
+	public static String eingabe1 = sc.next();
+	public static String eingabe2 = sc.next();
+	public static String eingabe3 = sc.next();
+	int egb = 0;
+	int eingaberechner(){
+		//this.eingabe = eingabe;
+		//this.eingabe1 = eingabe1;
+		//this.eingabe2 = eingabe2;
+		//this.eingabe3 = eingabe3;
+		int m = Integer.parseInt(eingabe);
+		int n = Integer.parseInt(eingabe1);
+		int l = Integer.parseInt(eingabe2);
+		int o = Integer.parseInt(eingabe3);
+		int summe = m+n+l+o;
+		egb = m*0+n*1+l*3+o*4;
+		int egb1 = m*0+n*1;
+		int egb2 = m*0+l*3;
+		int egb3 = m*0+o*4;
+		int egb4 = n*1+l*3;
+		int egb5 = n*1+o*4;
+		int egb6 = l*3+o*4;
+		int egb7 = m*0+n*1+l*3;
+		int egb8 = m*0+n*1+o*4;
+		int egb9 = m*0+l*3*o*4;
+		int egb10 = n*1+l*3+o*4;
+		//egb = eingabe*str(0) + eingabe1*str(1) + eingabe2*str(3) + eingabe3*str(4);
+		if(m > 3){
+			System.out.println("Praktikum kann nicht mehr bestehen werden");
+		}
+		if(egb >= 27 && summe <= 12 && m < 3){
+			System.out.println("Bestanden");
+		}
+		if(egb >= 27 && summe > 12 && m < 3){
+			System.out.println("Falsche Taste angetippt");
+		}
+		if(egb >= 27 && summe <= 12 && m < 3){
+			System.out.println("Bestanden");
+		}
+		if(egb < 27 && summe <= 12 && m < 3){
+			System.out.println("Nicht bestanden");
+		}
+		if(summe <= 12 && m < 3 && egb1 <= 27){
+			System.out.println("es fehlt dir noch: "+(27-egb1)+"Punkten um zu bestehen");
+		}
+		if(summe <= 12 && m < 3 && egb2 <= 27){
+			System.out.println("es fehlt dir noch: "+(27-egb2)+"Punkten um zu bestehen");
+		}
+		if(summe <= 12 && m < 3 && egb3 <= 27){
+			System.out.println("es fehlt dir noch: "+(27-egb3)+"Punkten um zu bestehen");
+		}
+		if(summe <= 12 && m < 3 && egb4 <= 27){
+			System.out.println("es fehlt dir noch: "+(27-egb4)+"Punkten um zu bestehen");
+		}
+		if(summe <= 12 && m < 3 && egb5 <= 27){
+			System.out.println("es fehlt dir noch: "+(27-egb5)+"Punkten um zu bestehen");
+		}
+		if(summe <= 12 && m < 3 && egb6 <= 27){
+			System.out.println("es fehlt dir noch: "+(27-egb6)+"Punkten um zu bestehen");
+		}
+		if(summe <= 12 && m < 3 && egb7 <= 27){
+			System.out.println("es fehlt dir noch: "+(27-egb7)+"Punkten um zu bestehen");
+		}
+		if(summe <= 12 && m < 3 && egb8 <= 27){
+			System.out.println("es fehlt dir noch: "+(27-egb8)+"Punkten um zu bestehen");
+		}
+		if(summe <= 12 && m < 3 && egb9 <= 27){
+			System.out.println("es fehlt dir noch: "+(27-egb9)+"Punkten um zu bestehen");
+		}
+		if(summe <= 12 && m < 3 && egb10 <= 27){
+			System.out.println("es fehlt dir noch: "+(27-egb10)+"Punkten um zu bestehen");
+		}
+		return egb;
+	}
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Rechner rechner = new Rechner();
+		rechner.eingaberechner();
+		//System.out.println(rechner.eingaberechner());
+	}
+ 
+}
