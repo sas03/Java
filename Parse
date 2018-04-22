@@ -1,0 +1,16 @@
+import java.util.*;
+
+class Ideone
+{
+	public static void main (String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		String eingabe = sc.next();
+		String eingabe1 = sc.next();
+		int a = Integer.parseInt(eingabe);
+		int b = Integer.parseInt(eingabe1);
+		System.out.print("Binaerausgabe von +"+a+" : "+Integer.toBinaryString(a)+" <"+a+"> "+"\n");
+		System.out.print("a = "+a+" mit Binary number = "+Integer.toBinaryString(a/8));
+		System.out.print(b);
+	}
+}
